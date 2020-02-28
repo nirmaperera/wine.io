@@ -1,6 +1,7 @@
 /* colors:
 header:#DDDAD1
 wine:#A92E3E; */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500&display=swap');
 
 html,body {
     -webkit-box-sizing: border-box;
@@ -36,6 +37,7 @@ html,body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat';
   }
   .fa-wine-glass-alt:before {
       padding:10px;
@@ -58,6 +60,7 @@ html,body {
       width:30%;
       display: flex;
 
+
   }
 
   .landingRight-content{
@@ -67,6 +70,56 @@ html,body {
     justify-content: center;
     color:white;
     margin: 0 auto;
+    font-family: 'Montserrat';
+  }
+  .landingRight-content h2{
+      font-size: 22px;
+  }
+  span::before{
+      content: 'perfect';
+      animation: animate infinite 8s;
+
+  }
+
+  @keyframes animate{
+      0%{
+          content: 'perfect';
+      }
+      10%{
+        content: 'sweet';
+    }
+    20%{
+        content: 'dry';
+    }
+     30%{
+        content: 'refreshing';
+     }
+     40%{
+        content: 'sparkling';
+     }
+     50%{
+        content: 'affordable';
+     }
+     60%{
+        content: 'fruity';
+     }
+     70%{
+        content: 'red';
+     }
+     80%{
+        content: 'white';
+     }
+     90%{
+        content: 'crisp';
+     }
+     100%{
+        content: 'perfect';
+     }
+
+  }
+  .landingRight-content p{
+    font-weight: 300;
+    font-size: 15px;
   }
 
   .landingRight-container button{
@@ -98,36 +151,42 @@ html,body {
 .about-container{
     height: 100%;
     width:100%;
-    background-image:url("./landingAbout.jpeg");
-	background-size: cover;
+    background-image:url("./landingAbout.jpg");
+    background-size: cover;
+    background-position: center center;
     background-repeat:no-repeat;
     position: relative;
+    font-family: 'Montserrat';
 }
 .explore-wine{
-    border: 2px solid black;
     width: 30%;
     position: absolute;
-   top:60px;
-   margin: 50px;
+   top:200px;
+   margin: 40px;
+   text-align: right;
 }
-.taste-wine{
-    border: 2px solid black;
-    width: 20%;
+.learn-wine{
+    width: 30%;
     position: absolute;
     right: 0;
     margin-top:10%;
     text-align: left;
-    margin: 50px;
+    margin: 40px;
 
 }
-.learn-wine{
-    border: 2px solid black;
+.taste-wine{
     width: 30%;
     position: absolute;
     bottom:50px;
     right:0;
-    margin: 50px;
+    margin: 40px;
 
+}
+.taste-wine h3, .learn-wine h3, .explore-wine h3{
+    color:#A92E3E;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 25px;
 }
 #explore-header{
     margin:0;
@@ -135,4 +194,24 @@ html,body {
 
 p{
     color:white;
+    font-size:20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#footer{
+    font-size: 15px;
+    line-height: 2em;
+    margin:0;
+    padding: 20px;
+    text-align: center;
+    background-color:#DDDAD1;
+    color:#A92E3E;
+}
+
+#footer li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
 }

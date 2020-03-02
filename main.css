@@ -16,8 +16,7 @@ html,body {
   }
 
   #header {
-
-    background-color:#DDDAD1;
+    background-color:#FAFBFD;
     height: 3.5em;
     left: 0;
     line-height: 3.5em;
@@ -29,7 +28,7 @@ html,body {
 
   #header h1 {
     height: inherit;
-    color:#A92E3E;
+    color:#AB325F;
     font-size:22px;
     line-height: inherit;
     margin: 0;
@@ -52,8 +51,8 @@ html,body {
   }
 
   .landingRight-container{
-      background-color:#A92E3E;
-      border-left:2px solid white;
+      background-color:#AB325F;
+      border-left:3px solid #CCD579;
       height:100%;
       position: absolute;
       right:0;
@@ -73,11 +72,11 @@ html,body {
     font-family: 'Montserrat';
   }
   .landingRight-content h2{
-      font-size: 22px;
+      font-size: 20px;
   }
   span::before{
       content: 'perfect';
-      animation: animate infinite 8s;
+      /* animation: animate infinite 8s; */
 
   }
 
@@ -120,17 +119,25 @@ html,body {
   .landingRight-content p{
     font-weight: 300;
     font-size: 15px;
+    color:#FAFBFD;
   }
-
+.landing-btns{
+    display: flex;
+    justify-content: space-between;
+}
+.landing-btns button{
+    margin:auto;
+}
   .landingRight-container button{
-	background-color:#DDDAD1;
+	background-color:#FAFBFD;
 	border-radius:15px;
 	display:inline-block;
 	cursor:pointer;
-	color:#A92E3E;
+	color:#AB325F;
 	font-size:14px;
 	font-weight:bold;
-	padding:14px 26px;
+    padding:14px 26px;
+    border:2px solid #CCD579;
 	text-decoration:none;
   }
 
@@ -146,6 +153,7 @@ html,body {
 
 .lines hr{
    margin:15px;
+   border: 1px solid #CCD579;
 }
 
 .about-container{
@@ -203,10 +211,10 @@ p{
     font-size: 15px;
     line-height: 2em;
     margin:0;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    background-color:#DDDAD1;
-    color:#A92E3E;
+    background-color:#FAFBFD;;
+    color:#AB325F;
 }
 
 #footer li {

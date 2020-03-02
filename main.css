@@ -38,8 +38,9 @@ html,body {
     justify-content: center;
     font-family: 'Montserrat';
   }
-  .fa-wine-glass-alt:before {
-      padding:10px;
+
+  .fa-cocktail:before {
+      padding-left:5px;
   }
 
   .landing-container{
@@ -63,6 +64,10 @@ html,body {
   }
 
   .landingRight-content{
+    background-image:url("./landingContent.jpeg");
+    background-size: cover;
+    width: 100%;
+	background-repeat:no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +77,10 @@ html,body {
     font-family: 'Montserrat';
   }
   .landingRight-content h2{
-      font-size: 20px;
+      font-size: 17px;
+      letter-spacing: 2px;
+      margin-top:40%;
+      margin-bottom:10%;
   }
   span::before{
       content: 'perfect';
@@ -116,26 +124,26 @@ html,body {
      }
 
   }
-  .landingRight-content p{
-    font-weight: 300;
-    font-size: 15px;
-    color:#FAFBFD;
-  }
+
 .landing-btns{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
-.landing-btns button{
-    margin:auto;
+
+.landing-btns button:hover{
+  background-color:#B3466F;
 }
   .landingRight-container button{
-	background-color:#FAFBFD;
+      margin:auto;
+	background-color:transparent;
 	border-radius:15px;
 	display:inline-block;
 	cursor:pointer;
-	color:#AB325F;
+	color:white;
 	font-size:14px;
-	font-weight:bold;
+    font-weight:bold;
+    margin-bottom:20px;
     padding:14px 26px;
     border:2px solid #CCD579;
 	text-decoration:none;
@@ -153,59 +161,10 @@ html,body {
 
 .lines hr{
    margin:15px;
-   border: 1px solid #CCD579;
+   border: 1px solid white;
 }
 
-.about-container{
-    height: 100%;
-    width:100%;
-    background-image:url("./landingAbout.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat:no-repeat;
-    position: relative;
-    font-family: 'Montserrat';
-}
-.explore-wine{
-    width: 30%;
-    position: absolute;
-   top:200px;
-   margin: 40px;
-   text-align: right;
-}
-.learn-wine{
-    width: 30%;
-    position: absolute;
-    right: 0;
-    margin-top:10%;
-    text-align: left;
-    margin: 40px;
 
-}
-.taste-wine{
-    width: 30%;
-    position: absolute;
-    bottom:50px;
-    right:0;
-    margin: 40px;
-
-}
-.taste-wine h3, .learn-wine h3, .explore-wine h3{
-    color:#A92E3E;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 25px;
-}
-#explore-header{
-    margin:0;
-}
-
-p{
-    color:white;
-    font-size:20px;
-    font-weight: 300;
-    line-height: 1.5;
-}
 
 #footer{
     font-size: 15px;

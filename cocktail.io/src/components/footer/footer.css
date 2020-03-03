@@ -1,0 +1,16 @@
+#footer{
+    font-size: 15px;
+    line-height: 2em;
+    margin:0;
+    padding: 15px;
+    text-align: center;
+    background-color:#FAFBFD;;
+    color:#AB325F;
+}
+
+#footer li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
+}

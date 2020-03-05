@@ -1,11 +1,13 @@
-.landing-container{
-    background-image:url("../assets/images/landingBg.jpg");
-	background-size: cover;
-    background-repeat:no-repeat;
-    height: 100%;
-    width:100%;
-    padding: 23%;
 
+  .landingLeft-container{
+    background-image:url("../assets/images/landingBg.jpg") ;
+    width:70%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-repeat:no-repeat;
   }
 
   .landingRight-container{
@@ -16,8 +18,8 @@
       top:0;
       right:0;
       width:30%;
-
       display: flex;
+
   }
 
   .landingRight-content{
@@ -71,7 +73,7 @@
 	text-decoration:none;
   }
   @media screen and (max-width: 1024px){
-    .landing-container{
+    .landingLeft-container{
         background-image: url('../assets/images/landingMobile.jpg')
 
     }

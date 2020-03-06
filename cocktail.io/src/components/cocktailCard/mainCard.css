@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -28,8 +29,15 @@
 }
 
 
-h2{
-
+.card-highlight h2{
     text-align: center;
     color:#B3466F;
+}
+img.recipeImage{
+    width:300px;
+
+}
+
+.category-name{
+    color:black;
 }

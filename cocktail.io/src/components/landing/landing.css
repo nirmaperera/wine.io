@@ -42,11 +42,7 @@
       margin-bottom:10%;
       text-align: center;
   }
-  span::before{
-      content: 'perfect';
-      /* animation: animate infinite 8s; */
 
-  }
 
 
 .landing-btns{

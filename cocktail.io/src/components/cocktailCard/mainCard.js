@@ -11,8 +11,8 @@ class Card extends Component {
         alcoholic: "",
         glass: "",
         thumbnail: "",
-        ingredients: [],
-        measurements: []
+        ingredients: "",
+        measurements: ""
 
 
     };
@@ -30,10 +30,10 @@ class Card extends Component {
                     alcoholic: response.data.drinks[0].strAlcoholic,
                     glass: response.data.drinks[0].strGlass,
                     thumbnail: response.data.drinks[0].strDrinkThumb,
-                    ingredients: response.data.drinks[0].strIngredient1 + "," + response.data.drinks[0].strIngredient2 + "," + response.data.drinks[0].strIngredient3 + "," + response.data.drinks[0].strIngredient4 + "," + response.data.drinks[0].strIngredient5 + "," + response.data.drinks[0].strIngredient6 + "," + response.data.drinks[0].strIngredient7 + "," + response.data.drinks[0].strIngredient8 + "," + response.data.drinks[0].strIngredient9 + "," + response.data.drinks[0].strIngredient10 + "," + response.data.drinks[0].strIngredient11 + "," + response.data.drinks[0].strIngredient12 + "," + response.data.drinks[0].strIngredient13 + "," + response.data.drinks[0].strIngredient14 + "," + response.data.drinks[0].strIngredient15,
+                    ingredients: response.data.drinks[0].strIngredient1 + " ," + response.data.drinks[0].strIngredient2 + " ," + response.data.drinks[0].strIngredient3 + " ," + response.data.drinks[0].strIngredient4 + " ," + response.data.drinks[0].strIngredient5 + " ," + response.data.drinks[0].strIngredient6 + " ," + response.data.drinks[0].strIngredient7 + " ," + response.data.drinks[0].strIngredient8 + " ," + response.data.drinks[0].strIngredient9 + " ," + response.data.drinks[0].strIngredient10 + " ," + response.data.drinks[0].strIngredient11 + " ," + response.data.drinks[0].strIngredient12 + " ," + response.data.drinks[0].strIngredient13 + " ," + response.data.drinks[0].strIngredient14 + " ," + response.data.drinks[0].strIngredient15,
                     measurements: response.data.drinks[0].strMeasure1 + "," + response.data.drinks[0].strMeasure2 + "," + response.data.drinks[0].strMeasure3 + "," + response.data.drinks[0].strMeasure4 + "," + response.data.drinks[0].strMeasure5 + "," + response.data.drinks[0].strMeasure6 + "," + response.data.drinks[0].strMeasure7 + "," + response.data.drinks[0].strMeasure8 + "," + response.data.drinks[0].strMeasure9 + "," + response.data.drinks[0].strMeasure10 + "," + response.data.drinks[0].strMeasure11 + "," + response.data.drinks[0].strMeasure12 + "," + response.data.drinks[0].strMeasure13 + "," + response.data.drinks[0].strMeasure14 + "," + response.data.drinks[0].strMeasure15,
                 }, () => {
-                    console.log('The recipes are: ', this.state.ingredients)
+                    console.log('The recipes are: ', this.state)
                     this.removeNull();
                 })
             })
@@ -48,9 +48,19 @@ class Card extends Component {
     }
 
     removeNull = () => {
-        let newIngredient = this.state.ingredients;
-        newIngredient.replace(/'null'/g, '');
-        console.log("the new ingredients are", newIngredient);
+
+        let originalStringI = this.state.ingredients;
+        let newStringI = originalStringI.replace(/,null|null/g, '');
+
+        let originalStringM = this.state.measurements;
+        let newStringM = originalStringM.replace(/,null|null/g, '');
+
+
+        this.setState({
+            ingredients: newStringI,
+            measurements: newStringM
+        })
+
     }
     render() {
         return (
@@ -67,13 +77,25 @@ class Card extends Component {
 
                     <div className="recipeInstructions">
                         <div>
-                            <h4 className="category-name">Drink is: {this.state.alcoholic}</h4>
+                            <h4 className="category-name">Type: {this.state.alcoholic}</h4>
+                        </div>
+                    </div>
+
+                    <div className="recipeGlass">
+                        <div>
+                            <h4 className="category-name">Type of Glass: {this.state.glass}</h4>
                         </div>
                     </div>
 
                     <div className="recipeIngredients">
                         <div>
                             <h4 className="category-name">Ingredients: {this.state.ingredients}</h4>
+                        </div>
+                    </div>
+
+                    <div className="recipeMeasurements">
+                        <div>
+                            <h4 className="category-name">Measurements: {this.state.measurements}</h4>
                         </div>
                     </div>
 

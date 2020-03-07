@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 .card-container{
     width: 100%;
     height: 100%;
@@ -6,8 +7,6 @@
     color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 
 .card-highlight{
@@ -17,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
     margin: 0 auto;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -28,10 +27,24 @@
   0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
+.card-col{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
 
 .card-highlight h2{
+    line-height: 1.5;
     text-align: center;
-    color:#B3466F;
+    color: #B3466F;
+    margin-top: -10%;
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+.header-title span{
+    display: block;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 2px;
 }
 img.recipeImage{
     width:300px;
@@ -40,4 +53,43 @@ img.recipeImage{
 
 .category-name{
     color:black;
+    margin:5px;
+}
+
+li,p{
+    color:black;
+}
+
+.col-ingred:first-child{
+
+}
+
+.col-ingred:last-child{
+   margin-left: 5px;
+    }
+
+.recipeIngredients{
+    display: flex;
+
+}
+
+.card-highlight h4{
+    font-family: 'Courgette', cursive;
+    letter-spacing: 2px;
+    color: #B3466F;
+
+}
+
+span, .col-ingred p{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color:#111;
+
+}
+
+hr{
+    width:50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

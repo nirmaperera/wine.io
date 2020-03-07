@@ -12,6 +12,8 @@ class Card extends Component {
         glass: "",
         thumbnail: "",
         ingredients: "",
+        ingredient: [],
+        measurement: [],
         measurements: ""
 
 
@@ -52,14 +54,23 @@ class Card extends Component {
         let originalStringI = this.state.ingredients;
         let newStringI = originalStringI.replace(/,null|null/g, '');
 
+        var array = newStringI.split(',');
+
+
         let originalStringM = this.state.measurements;
         let newStringM = originalStringM.replace(/,null|null/g, '');
+        var arrayM = newStringM.split(',');
 
 
         this.setState({
-            ingredients: newStringI,
-            measurements: newStringM
+            ingredient: array,
+            measurement: arrayM
+        }, () => {
+
+            console.log(this.state.ingredient);
+            console.log(this.state.measurement);
         })
+
 
     }
     render() {
@@ -68,48 +79,64 @@ class Card extends Component {
             <div className="card-container">
 
                 <div className="card-highlight">
-                    <h2 className="header-title"> Have you tried a <span className="name">{this.state.name} </span>?</h2>
-                    <img className="recipeImage" src={this.state.thumbnail} />
-
-                    <div className="recipeCategory">
-                        <h4 className="category-name">category: {this.state.category}</h4>
+                    <div className="card-col">
+                        <img className="recipeImage" src={this.state.thumbnail} />
                     </div>
 
-                    <div className="recipeInstructions">
-                        <div>
-                            <h4 className="category-name">Type: {this.state.alcoholic}</h4>
+
+                    <div className="card-col">
+                        <h2 className="header-title"> Have you tried a <span className="name">{this.state.name} ?</span></h2>
+                        <hr />
+
+
+
+                        <div className="recipeCategory">
+                            <h4 className="category-name"> Category: <span>{this.state.category}</span> </h4>
+                        </div>
+
+                        <div className="recipeInstructions">
+                            <div>
+                                <h4 className="category-name">Type: <span>{this.state.alcoholic}</span></h4>
+                            </div>
+                        </div>
+
+                        <div className="recipeGlass">
+                            <div>
+                                <h4 className="category-name">Type of Glass: <span>{this.state.glass}</span></h4>
+                            </div>
+                        </div>
+
+                        <div className="recipeIngredients">
+
+                            <div className="col-ingred">
+                                {this.state.ingredient.map((aIngredient, index) => {
+
+                                    return (
+                                        <p key={index}>{aIngredient} - </p>
+                                    )
+
+                                })}
+                            </div>
+                            <div className="col-ingred">
+                                {this.state.measurement.map((aMeasurement, index) => {
+                                    return (
+                                        <p key={index}>{aMeasurement}</p>
+                                    )
+                                })}
+                            </div>
+
+                        </div>
+
+                        <div className="recipeInstructions">
+                            <div>
+                                <h4 className="category-name">Instructions: <span>{this.state.instructions}</span></h4>
+                            </div>
                         </div>
                     </div>
-
-                    <div className="recipeGlass">
-                        <div>
-                            <h4 className="category-name">Type of Glass: {this.state.glass}</h4>
-                        </div>
-                    </div>
-
-                    <div className="recipeIngredients">
-                        <div>
-                            <h4 className="category-name">Ingredients: {this.state.ingredients}</h4>
-                        </div>
-                    </div>
-
-                    <div className="recipeMeasurements">
-                        <div>
-                            <h4 className="category-name">Measurements: {this.state.measurements}</h4>
-                        </div>
-                    </div>
-
-                    <div className="recipeInstructions">
-                        <div>
-                            <h4 className="category-name">Instructions: {this.state.instructions}</h4>
-                        </div>
-                    </div>
-
-
                 </div>
 
+            </div >
 
-            </div>
         )
     }
 }

@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import '../cocktailCard/mainCard.css';
 import axios from 'axios';
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    EmailShareButton,
+} from 'react-share';
+
+import {
+    FacebookShareCount,
+} from 'react-share';
+
+import {
+    FacebookIcon,
+    TwitterIcon,
+    EmailIcon,
+} from 'react-share';
 
 
 class Card extends Component {
@@ -81,6 +96,8 @@ class Card extends Component {
                 <div className="card-highlight">
                     <div className="card-col">
                         <img className="recipeImage" src={this.state.thumbnail} />
+                        <div className="recipe-share">
+                        </div>
                     </div>
 
 
